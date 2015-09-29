@@ -3,7 +3,7 @@ using SQLite;
 
 namespace Expenso.Models.Database
 {
-	public class BusinessEntityBase:IBusinessEntity
+	public class BusinessEntityBase:AuditEntityBase,IBusinessEntity
 	{
 		public BusinessEntityBase ()
 		{

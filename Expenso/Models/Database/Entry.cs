@@ -2,38 +2,36 @@
 
 using SQLite;
 
-namespace Expenso.Models
+namespace Expenso.Models.Database
 {
 	[Table("Entry")]
-	public class Entry
-	{
-		[PrimaryKey, AutoIncrement]
-		public int Id { get; set; }
-
+	public class Entry:BusinessEntityBase	
+	{	
+		
 		public DateTime Date {
 			get;
 			set;
 		}
 
-		[MaxLength(250)]
+
 		public string Name { get; set; }
 
-		[MaxLength(250)]
+		[Indexed]
 		public string Category { get; set; }
 
-		[MaxLength(250)]
+
 		public string SubCategory { get; set; }
 
-		[MaxLength(1)]
+		[Indexed]
 		public string TypeEntry { get; set;}
-
 
 		public double Amount {
 			get;
 			set;
-		}
+		}		
 
 		public string Currency{ get; set;}
+
 
 	}
 }
